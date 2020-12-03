@@ -49,7 +49,7 @@ function _P:adminParticle()
   util.Effect("entity_remove", effectdata)
 end
 
-concommand.Add("adminmode", function(ply, cmd, args)
+concommand.Add(adminSys.consoleCommand, function(ply, cmd, args)
   ply:adminModeFunc()
 end)
 
