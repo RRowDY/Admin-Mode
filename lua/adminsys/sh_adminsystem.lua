@@ -2,6 +2,7 @@ local delay = 2
 local lastOccurance = 0
 
 local function checkPlayerNoClip(ply, state)
+  if not adminSys.groupsAllowed[ply:GetUserGroup()] then return end
 
   if ply.adminMode then
     return true
