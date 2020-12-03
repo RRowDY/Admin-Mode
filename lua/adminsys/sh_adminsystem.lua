@@ -20,3 +20,5 @@ local function checkPlayerNoClip(ply, state)
 end
 
 hook.Add("PlayerNoClip", "adminSystemNoclip", checkPlayerNoClip)
+
+--test
