@@ -49,6 +49,13 @@ function _P:adminParticle()
   util.Effect("entity_remove", effectdata)
 end
 
+hook.Add("PlayerSay", "adminSysCommand", function(ply, text)
+  if (string.lower(text) == adminSys.prefix .. adminSys.chatCommand) then 
+    ply:adminModeFunc()
+    return ""
+  end
+end)
+
 concommand.Add(adminSys.consoleCommand, function(ply, cmd, args)
   ply:adminModeFunc()
 end)
